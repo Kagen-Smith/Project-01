@@ -2,8 +2,11 @@
     background-color: grey;
 }
 
+
+
 .container {
     display: flex; 
+    
 }
 
 .box1{
@@ -17,9 +20,11 @@
 }
 
 .box2 {
+    display: flex;
     width: 1500px; 
     height: 850px;
     padding: 20px;
+color: white;
     border: 3px solid black;
     box-sizing: border-box; 
 }
@@ -39,4 +44,34 @@
     padding: 20px;
     color:white;
     background-color: #333333;
+}
+
+#addsong, #newplaylist {
+    background-color: black;
+}
+
+.addsong {
+    align-content: center;
+    justify-content: center;
+    width:300px;
+    height: 85px;
+    padding: 20px;
+    color:white;
+    background-color: #07d0df;
+    border-radius: 18%;
+    border: black  solid 2px;
+    float: right;
+}
+
+.newplaylist {
+    align-content: middle;
+    justify-content: center;
+    width:300px;
+    height: 85px;
+    padding: 20px;
+    color:white;
+    border: black solid 2px;
+    background-color: #07d0df;
+    border-radius: 18%;
+    float: bottom;
 }
