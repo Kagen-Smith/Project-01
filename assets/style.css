@@ -3,14 +3,13 @@
 }
 
 
-
 .container {
     display: flex; 
 }
 
 .box1{
-    width:20vw;
-    height: 850px;
+    width:25vw;
+    height: 45vw;
     padding: 20px;
     margin-left: 2px;
    margin-right: 5px;
@@ -20,7 +19,7 @@
 
 .box2 {
     display: flex;
-    width: 1500px; 
+    width: 60vw; 
     padding: 20px;
 color: white;
     border: 3px solid black;
@@ -30,24 +29,27 @@ color: white;
 }
  
 .innerbox{
-    width:300px;
-    height: 85px;
+    height: 11vh;
+    width:20vw;
     padding: 20px;
+    margin-left:10px ;
     color:white;
     background-color: #333333;
 }
 
 .longbox{
-    width:300px;
-    height: 680px;
-    margin-top: 25px;
+    height: 74vh;
+    width:20vw;
+    margin-top: 20px;
+    margin-left: 10px;
     padding: 20px;
     color:white;
     background-color: #333333;
 }
 
 #addsong, #newplaylist {
-    background-color: black;
+    color:white;
+    background-color:black ;
 }
 
 .inputContainer {
@@ -56,12 +58,24 @@ color: white;
 }
 
 .newplaylist {
-    width:300px;
-    height: 85px;
-    padding: 20px;
+    width:16vw;
+    height: 10vh;
     color:white;
     border: black solid 2px;
     background-color: #07d0df;
     border-radius: 18%;
    
+}
+
+#newplaylist, #addsong {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+   
+}
+
+button{
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
