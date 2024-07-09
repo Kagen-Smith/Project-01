@@ -26,7 +26,8 @@ function renderPlaylist() {
 
 
 
-let songs = [
+let songs = { 
+  songList [
   {
     title: "1904",
     artist: "The Tallest Man on Earth",
@@ -924,4 +925,5 @@ let songs = [
     img_url: "http://fireflygrove.com/songnotes/images/artists/DeVotchKa.jpg"
   }
 ]
-  
+}
+console.log(songs);  
