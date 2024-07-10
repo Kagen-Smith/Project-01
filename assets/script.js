@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 // const song = document.getElementById('song');
 // const band = document.getElementById('band');
 // const genre = document.getElementById('genre');
@@ -925,7 +926,16 @@ let songs =
     img_url: "http://fireflygrove.com/songnotes/images/artists/DeVotchKa.jpg"
   }
 ]
+function updateUserName() {
+  addEventListener('click')
+  let username=document.getElementById("userName").value;
+  document.getElementById("userName").innerText = "userName: " + username;
 
-
-
-console.log(songs);
+}
+=======
+function updateUserName() {
+    addEventListener('click')
+    let username=document.getElementById("userName").value;
+    document.getElementById("userName").innerText = "userName: " + username;
+}
+>>>>>>> 9a2fc8bfb1e1d069a82f065c376ae4e6c3a24fe7
