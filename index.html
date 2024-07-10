@@ -4,7 +4,6 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <!-- <script src="https://cdn.tailwindcss.com"></script> -->
   <title>Playlist Creator</title>
   <link rel="stylesheet" href="./assets/style.css" />
 </head>
@@ -16,13 +15,15 @@
   <div class="container">
     <div class="box1">
       <div class="innerbox">
-        <p class="signInBox">
-          <p><label for=""></label>
-            <input type="text" id="userName" name="userName" placeholder="User Name"></textinput>
-            <input type="text" id="password" name="password" placeholder="Enter Password"></textinput>
-            <button>submit</button>
+        <section class="signInBox">
+          <p>
+            <label for="userName"></label>
+            <input type="text" id="userName" name="userName" placeholder="User Name">
+            <label for="password"></label>
+            <input type="password" id="password" name="password" placeholder="Enter Password">
+            <button id="submitBtn">Submit</button>
           </p>
-        </p>
+        </section>
       </div>
       <article class="longbox">
         <ol>
@@ -35,22 +36,23 @@
     <div class="box2">
       <div class="inputContainer">
         <div class="newplaylist">
-          <p><label for="addsong"></label>
-            <input type="type" id="addsong" name="songadd" placeholder="add song"></textinput>
-            <button> create a playlist </button>
+          <p>
+            <label for="addsong"></label>
+            <input type="text" id="addsong" name="songadd" placeholder="Name of Playlist">
+            <button>Create a Playlist</button>
           </p>
         </div>
         <div class="newplaylist">
-          <p><label for="newplaylist"></label>
-            <input type="text" id="newplaylist" name="createNewPlaylist" placeholder="add song"></textinput>
-            <button> add song to playlist </button>
+          <p>
+            <label for="newplaylist"></label>
+            <input type="text" id="newplaylist" name="createNewPlaylist" placeholder="New Playlist">
+            <button>Add Song to Playlist</button>
           </p>
         </div>
       </div>
     </div>
-
   </div>
+  <script src ="./assets/script.js"></script>
 </body>
-
 
 </html>
