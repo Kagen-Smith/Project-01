@@ -924,30 +924,36 @@ let songs =
     img_url: "http://fireflygrove.com/songnotes/images/artists/DeVotchKa.jpg"
   }
 ]
+const datalist =document.getElementById('songs');
 
-const song = document.getElementById('song');
-const band = document.getElementById('band');
-const genre = document.getElementById('genre');
-const saveButton = document.getElementById('save');
+songs.forEach(songs => {
+  const option =document.createElement('option');
+  option.value = songs.title;
+  datalist.appendChild(option);
+  console.log("roar");
+});
 
-function savePlaylist() {
-  const playlist = {
-    song: song.value,
-    band: band.value,
-    genre: genre.value
-  };
-  localStorage.setItem('playlist', JSON.stringify(playlist));
-}
+// const song = document.getElementById('song');
+// const band = document.getElementById('band');
+// const genre = document.getElementById('genre');
+// const saveButton = document.getElementById('save');
 
-function renderPlaylist() {
-  const lastPlaylist = JSON.parse(localStorage.getItem('playlist'));
+// function savePlaylist() {
+//   const playlist = {
+//     song: song.value,
+//   };
+//   localStorage.setItem('playlist', JSON.stringify(playlist));
+// }
 
-  if (lastPlaylist !== null) {
-    document.getElementById('saved-song').innerHTML = lastPlaylist.song;
-    document.getElementById('saved-band').innerHTML = lastPlaylist.band;
-    document.getElementById('saved-genre').innerHTML = lastPlaylist.genre;
-  } else {
-    return;
-  }
-}
+// function renderPlaylist() {
+//   const lastPlaylist = JSON.parse(localStorage.getItem('playlist'));
+
+//   if (lastPlaylist !== null) {
+//     document.getElementById('saved-song').innerHTML = lastPlaylist.song;
+//     document.getElementById('saved-band').innerHTML = lastPlaylist.band;
+//     document.getElementById('saved-genre').innerHTML = lastPlaylist.genre;
+//   } else {
+//     return;
+//   }
+// }
 
