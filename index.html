@@ -53,14 +53,14 @@
                     <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                   </div>
                   <div class="modal-body">
-                    <input type="text" name="add songs to playlist" placeholder="Add songs">
-                    <datalist >
-                      <option id="songs">
+                    <input list = "songs" type="text" name="add songs to playlist" placeholder="Add songs">
+                    <datalist id="songs">
                     </datalist>
                   </div>
                   <div class="modal-footer">
-                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-                    <button type="button" class="btn btn-primary">Save changes</button>
+                    <button id = "cancel" type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancel</button>
+                    <button id = "addSong" type="button" class="btn btn-primary">Add song to playlist</button>
+                    <button id="savePlaylist" type="button" class="btn btn-primary">Finish playlist</button>
                   </div>
                 </div>
               </div>

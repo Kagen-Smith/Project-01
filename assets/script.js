@@ -924,9 +924,14 @@ let songs =
     img_url: "http://fireflygrove.com/songnotes/images/artists/DeVotchKa.jpg"
   }
 ]
-const displaySongOptions = function (songs) {
-  const playlistItem = document.querySelector('#songs');
-}
+const datalist =document.getElementById('songs');
+
+songs.forEach(songs => {
+  const option =document.createElement('option');
+  option.value = songs.title;
+  datalist.appendChild(option);
+  console.log("roar");
+});
 
 // const song = document.getElementById('song');
 // const band = document.getElementById('band');
