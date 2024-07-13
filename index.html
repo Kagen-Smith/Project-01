@@ -27,26 +27,22 @@
           </div>
         </div>
       </div>
-      <article class="longbox">
-        <ol>
-          <li>
-            placeholder
-          </li>
-        </ol>
-      </article>
+      <ul id="playlistContainer">
+      </ul>
     </section>
     <section class="box2">
       <div class="inputContainer">
         <div class="newplaylist rounded-pill">
           <div class="d-flex flex-column">
             <label for="addsong"></label>
-            <input type="text" id="addsong" name="songadd" placeholder="Name of Playlist">
+            <!-- <input type="text" id="addsong" name="songadd" placeholder="Name of Playlist"> -->
             <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal">
               Create Playlist
             </button>
-            
+
             <!-- Modal -->
-            <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+            <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel"
+              aria-hidden="true">
               <div class="modal-dialog">
                 <div class="modal-content">
                   <div class="modal-header">
@@ -54,26 +50,26 @@
                     <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                   </div>
                   <div class="modal-body">
-                    <input list = "songs" type="text" name="add songs to playlist" placeholder="Add songs">
+                    <input id ="songs" list="songs" type="text" name="add songs to playlist" placeholder="Add songs">
                     <datalist id="songs">
                     </datalist>
                   </div>
                   <div class="modal-footer">
-                    <button id = "cancel" type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancel</button>
-                    <button id = "addSong" type="button" class="btn btn-primary">Add song to playlist</button>
+                    <button id="cancel" type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancel</button>
+                    <button id="addSong" type="button" class="btn btn-primary">Add to playlist</button>
                     <button id="savePlaylist" type="button" class="btn btn-primary">Finish playlist</button>
                   </div>
                 </div>
               </div>
             </div>
-        </div>
-        <div class="newplaylist rounded-pill">
-          <div class="d-flex flex-column"><label for="newplaylist"></label>
-            <input type="text" id="newplaylist" name="createNewPlaylist" placeholder="New Playlist">
-            <button>Add Song to Playlist</button>
+          </div>
+          <!-- <div class="newplaylist rounded-pill">
+            <div class="d-flex flex-column"><label for="newplaylist"></label>
+              <input type="text" id="newplaylist" name="createNewPlaylist" placeholder="New Playlist">
+              <button>Add Song to Playlist</button>
+            </div> -->
           </div>
         </div>
-      </div>
     </section>
   </main>
   <script src="./assets/script.js"></script>

@@ -45,7 +45,7 @@ color: white;
     background-color: #333333;
 }
 
-.longbox{
+#playlistContainer{
     height: 74vh;
     width:20vw;
     margin-top: 20px;
@@ -84,3 +84,4 @@ color: white;
     justify-content: center;
     align-items: center;
 }
+

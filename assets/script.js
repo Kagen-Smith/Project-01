@@ -21,7 +21,7 @@ function updateUIWithUsername() {
     const signInBox = document.querySelector('.signInBox');
     signInBox.innerHTML = `<p>Welcome, ${user.userName}!</p>`;
   }
-}
+};
 
 updateUIWithUsername();
 
@@ -930,30 +930,43 @@ songs.forEach(songs => {
   const option =document.createElement('option');
   option.value = songs.title;
   datalist.appendChild(option);
-  console.log("roar");
 });
 
-// const song = document.getElementById('song');
-// const band = document.getElementById('band');
-// const genre = document.getElementById('genre');
-// const saveButton = document.getElementById('save');
-
-// function savePlaylist() {
-//   const playlist = {
-//     song: song.value,
-//   };
-//   localStorage.setItem('playlist', JSON.stringify(playlist));
-// }
-
-// function renderPlaylist() {
-//   const lastPlaylist = JSON.parse(localStorage.getItem('playlist'));
-
-//   if (lastPlaylist !== null) {
-//     document.getElementById('saved-song').innerHTML = lastPlaylist.song;
-//     document.getElementById('saved-band').innerHTML = lastPlaylist.band;
-//     document.getElementById('saved-genre').innerHTML = lastPlaylist.genre;
-//   } else {
-//     return;
-//   }
-// }
-
+document.addEventListener('DOMContentLoaded', function() {
+let songs = [];
+  const addSongBtn = document.querySelector('#addSong');
+   const finishPlaylistBtn = document.querySelector('#savePlaylist');
+   const playlistContainer = document.querySelector('#playlistContainer');
+   const inputField = document.querySelector('#songs');
+ 
+   addSongBtn.addEventListener('click', function(event) {
+     event.preventDefault();
+ 
+     const newSong = inputField.value;
+     songs.push(newSong);
+     inputField.value = '';
+ 
+     const option = document.createElement('option');
+     option.value = newSong;
+     inputField.appendChild(option);
+   });
+ 
+   finishPlaylistBtn.addEventListener('click', function() {
+    const user = JSON.parse(localStorage.getItem('user'));
+    if (!user || !user.userName) {
+      alert('You need to sign in to create a playlist.');
+      return; 
+    }
+ 
+     songs.forEach(song => {
+       const li = document.createElement('li');
+       li.textContent = song;
+       playlistContainer.appendChild(li);
+     });
+ 
+     localStorage.setItem('songs', JSON.stringify(songs));
+   });
+ 
+   const storedSongs = JSON.parse(localStorage.getItem('songs')) || [];
+   songs = storedSongs; 
+ });
