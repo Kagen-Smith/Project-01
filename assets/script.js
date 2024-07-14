@@ -924,10 +924,10 @@ let songs =
     img_url: "http://fireflygrove.com/songnotes/images/artists/DeVotchKa.jpg"
   }
 ]
-const datalist =document.getElementById('songs');
+const datalist = document.getElementById('songsList');
 
 songs.forEach(songs => {
-  const option =document.createElement('option');
+  const option = document.createElement('option');
   option.value = songs.title;
   datalist.appendChild(option);
 });
